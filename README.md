@@ -27,15 +27,18 @@ dr = devrant.Devrant()
 
 Then we can call some functions.
 ```python
-dr.getRants('SORT', LIMIT, SKIP)
-dr.getRant('SORT', INDEX)
+dr.get_rants('SORT', LIMIT, SKIP)
+dr.get_rant('SORT', INDEX)
+dr.get_user_id('NAME')
+dr.get_profile(ID)
+dr.get_search('TERM')
 ```
 
 ## Options
 There are a few different options to choose from, in the above example you may have noticed `SORT`, `LIMIT`..etc.
 These are options, here are what you can choose from.
 ```
-getRants():
+get_rants():
   SORT - STRING:
     algo,
     recent,
@@ -44,13 +47,24 @@ getRants():
     0-50
   SKIP - INTEGER:
     0-~788
-getRant():
+get_rant():
   SORT - STRING:
     algo,
     recent,
     top
   INDEX - INTEGER:
     0-~788
+get_user_id():
+  NAME - STRING:
+    ANY STRING
+get_profile():
+  ID - INTEGER:
+    0-?
+get_search():
+  TERM - STRING:
+    ANY STRING
 ```
+
+If you are stuck you may look at the demo at the bottom of the api script.
 
 Hope this API comes in handy!
